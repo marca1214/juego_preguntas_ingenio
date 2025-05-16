@@ -1,0 +1,144 @@
+* {
+    box-sizing: border-box;
+}
+body 
+{
+   font-family: "Roboto"; /* Es el tipo de letra o fuente */
+   font-size: 13px;
+   background-color: gray;
+}
+p {
+    color: black;
+}
+a {
+    display: inline-block; /*El elemento aparece en línea pero se comporta como un
+                          elemento block.Se trabaja cuando se quiere dar anchura al elemento*/
+    text-decoration: none; /*Para que los link no tengan delineado */
+}
+header {
+    background-color: black; /*Atributo que permite cambiar el fondo del contenedor 
+                                seleccionado en este caso header*/
+    padding: 10px 0; /*despues del contenido esta el relleno con esta configuracion hacemos 
+                    que arriba y abajo del relleno haya un espacio de 10px y a la izquierda
+                    y derecha 0 pixceles*/
+   
+    top: 0; /*Las propiedades top y bottom especifican el desplazamiento vertical desde su
+     posición original; las propiedades left y right especifican su desplazamiento horizontal*/
+    left: 0;
+    width: 100%;
+    border-style: solid;
+    border-color: black;
+    z-index: 2; /*es como si los elementos fueran capas, la sección inicio se va a colocar
+                     encima, poque header no esta ocupando espacio.*/
+}
+
+header .container {
+    display: flex;     /*permite acomodar, le da espacio a sus elementos hijos como 
+                        <nav> y <a>, Desde ese contenedor vamos a poder especificar la
+                        alineación de los elementos que hay dentro, el tamaño de los elementos
+                        que contienen y distribuir el espacio restante que hay entre los elementos
+                        del contenedor Flex, y todo esto en una sola dirección, ya sea una 
+                        horizontal o vertical. Es decir, podemos distribuir los elementos que
+                        contiene la etiqueta sin poner nada dentro de esos elementos.*/
+    justify-content: space-between ;
+    align-items: center;
+}
+header .container .logo
+{
+    width: 100px;
+}
+
+header .container h1
+{
+    color: yellow;/**/ 
+     font-size: 45px; /**/
+     text-shadow: -3px -3px 1px black, /*conocido como el efecto NEON o fluorescente */
+     0 0 25px #00FF99,
+     0 0 50px #00FF99,
+     0 0 100px #00FF99;
+     text-align: center; /**/
+     background-color: black ; /**/
+     font-family: verdana;
+     letter-spacing: 10px; /**/
+     padding: 2%; /**/
+     margin-bottom: 0; /**/
+}
+.container{
+        width: 100%; /*debemos olvidar que existe un container fuera*/
+    }
+
+
+
+.menu {
+    background-color: gray;
+    border-radius: 10px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    display: flex;
+    gap: 20px;
+    flex-wrap: wrap; /* Para que los botones se envuelvan en pantallas pequeñas */
+    justify-content: center; /* Centrar los botones */
+}
+
+.menu-button {
+    background-color: #007bff;
+    color: white;
+    border: none;
+    padding: 15px 25px;
+    border-radius: 8px;
+    cursor: pointer;
+    font-size: 16px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.menu-button:hover {
+    background-color: #0056b3;
+    transform: scale(1.05);
+}
+
+.button-icon {
+    font-size: 20px;
+}
+
+/* Estilos para pantallas más pequeñas */
+@media (max-width: 600px) {
+    .menu {
+        flex-direction: column; /* Apilar los botones en pantallas pequeñas */
+        align-items: stretch; /* Ancho completo para los botones */
+        padding: 15px;
+        gap: 10px;
+    }
+
+    .menu-button {
+        padding: 12px 20px;
+        justify-content: center; /* Centrar el contenido del botón */
+    }
+
+    .button-icon {
+        display: none; /* Opcional: ocultar el icono en pantallas muy pequeñas */
+    }
+        header .container .logo
+    {
+        width: 50px;
+    }
+
+    header .container h1
+    {
+        color: yellow;/**/ 
+         font-size: 15px; /**/
+         text-shadow: -3px -3px 1px black, /*conocido como el efecto NEON o fluorescente */
+         0 0 25px #00FF99,
+         0 0 50px #00FF99,
+         0 0 100px #00FF99;
+         text-align: center; /**/
+         background-color: black ; /**/
+         font-family: verdana;
+         letter-spacing: 2px; /**/
+         padding: 2%; /**/
+         margin-bottom: 0; /**/
+    }
+
+}

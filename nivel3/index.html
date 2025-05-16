@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Juego de Ingenio</title>
+    <link rel="stylesheet" href="css/estilo.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>Juego de Ingenio</h1>
+            <div class="score">Puntuación: <span id="score">0</span></div>
+            <div class="level">Nivel: <span id="level">3</span></div>
+        </header>
+
+        <main>
+            <div id="question-container">
+                <p id="question-text">Aquí aparecerá la pregunta...</p>
+                <div id="answer-buttons">
+                    <button class="answer-btn" data-correct="false">Opción A</button>
+                    <button class="answer-btn" data-correct="false">Opción B</button>
+                    <button class="answer-btn" data-correct="false">Opción C</button>
+                    <button class="answer-btn" data-correct="false">Opción D</button>
+                </div>
+            </div>
+            <div id="feedback" class="hidden"></div>
+            <button id="next-button" class="hidden">Siguiente Pregunta</button>
+        </main>
+        <br>
+        <br>
+           <a href="../index.html" class="boton boton-blanco">SALIR</a>
+
+        <footer>
+            <p>&copy; 2025 Juego de Ingenio</p>
+        </footer>
+    </div>
+
+    <script src="js/script.js"></script>
+</body>
+</html>
